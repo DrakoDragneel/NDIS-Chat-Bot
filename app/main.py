@@ -81,10 +81,11 @@ def is_ndis_related(message: str) -> bool:
 
 
 @app.get("/")
-def health_check():
+def home():
     return {
-        "status": "running",
-        "message": "NDIS chatbot FastAPI backend is running."
+        "message": "NDIS Chatbot API is running.",
+        "test_url": "/docs",
+        "chat_endpoint": "/api/chat"
     }
 
 
