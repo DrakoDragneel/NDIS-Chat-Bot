@@ -1,5 +1,361 @@
 [
   {
+    "id": "ndis_basic_0001",
+    "category": "NDIS Basics",
+    "subcategory": "Overview",
+    "question": "What is NDIS?",
+    "answer": "The NDIS, or National Disability Insurance Scheme, is an Australian government scheme that provides funding and support to eligible people with permanent and significant disability. It helps participants access disability-related supports that improve independence, daily living, community participation, and quality of life.",
+    "keywords": [
+      "ndis",
+      "what is ndis",
+      "ndis meaning",
+      "national disability insurance scheme",
+      "disability insurance scheme",
+      "disability support australia"
+    ],
+    "intent": "basic_understanding",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "critical",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0002",
+    "category": "NDIS Basics",
+    "subcategory": "Meaning",
+    "question": "What does NDIS stand for?",
+    "answer": "NDIS stands for National Disability Insurance Scheme. It is the Australian scheme that supports eligible people with permanent and significant disability through funded disability-related supports.",
+    "keywords": [
+      "ndis stands for",
+      "national disability insurance scheme",
+      "ndis full form",
+      "ndis meaning"
+    ],
+    "intent": "basic_understanding",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "critical",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0003",
+    "category": "NDIS Basics",
+    "subcategory": "Purpose",
+    "question": "What does the NDIS do?",
+    "answer": "The NDIS funds reasonable and necessary disability-related supports for eligible participants. These supports can help with daily activities, independence, therapy, assistive technology, community participation, employment goals, and other disability-related needs.",
+    "keywords": [
+      "what does ndis do",
+      "ndis purpose",
+      "ndis supports",
+      "disability supports",
+      "reasonable and necessary"
+    ],
+    "intent": "basic_understanding",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "critical",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0004",
+    "category": "NDIS Basics",
+    "subcategory": "Who It Supports",
+    "question": "Who is the NDIS for?",
+    "answer": "The NDIS is for eligible people in Australia who are under 65 when they apply, meet residency requirements, and have a permanent and significant disability or meet early intervention requirements.",
+    "keywords": [
+      "who is ndis for",
+      "who can get ndis",
+      "eligible people",
+      "participants",
+      "under 65",
+      "permanent disability"
+    ],
+    "intent": "eligibility_check",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "critical",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0005",
+    "category": "NDIS Basics",
+    "subcategory": "How It Works",
+    "question": "How does the NDIS work?",
+    "answer": "The NDIS works by assessing whether a person meets access requirements. If approved, the participant receives an NDIS plan with funded supports. The funding can only be used for approved supports that relate to the participant’s disability, goals, and support needs.",
+    "keywords": [
+      "how ndis works",
+      "ndis process",
+      "ndis plan",
+      "funded supports",
+      "access requirements"
+    ],
+    "intent": "basic_understanding",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "critical",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0006",
+    "category": "NDIS Basics",
+    "subcategory": "NDIA",
+    "question": "Who runs the NDIS?",
+    "answer": "The National Disability Insurance Agency, or NDIA, is responsible for delivering the NDIS. The NDIA manages access decisions, participant plans, funding decisions, and payments.",
+    "keywords": [
+      "who runs ndis",
+      "ndia",
+      "national disability insurance agency",
+      "who manages ndis"
+    ],
+    "intent": "basic_understanding",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "high",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0007",
+    "category": "NDIS Basics",
+    "subcategory": "NDIA vs NDIS",
+    "question": "What is the difference between NDIS and NDIA?",
+    "answer": "The NDIS is the support scheme. The NDIA is the agency that delivers and manages the scheme, including access decisions, plans, funding, and payments.",
+    "keywords": [
+      "ndis vs ndia",
+      "difference between ndis and ndia",
+      "ndia",
+      "scheme and agency"
+    ],
+    "intent": "basic_understanding",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "high",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0008",
+    "category": "NDIS Basics",
+    "subcategory": "Participant",
+    "question": "What is an NDIS participant?",
+    "answer": "An NDIS participant is a person who has been approved to access the NDIS and has an NDIS plan. Their plan includes funded supports based on their disability-related needs and goals.",
+    "keywords": [
+      "ndis participant",
+      "participant meaning",
+      "approved participant",
+      "ndis plan"
+    ],
+    "intent": "basic_understanding",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "high",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0010",
+    "category": "Plans & Funding",
+    "subcategory": "Funding Basics",
+    "question": "What is NDIS funding?",
+    "answer": "NDIS funding is the budget allocated in a participant’s plan to pay for approved disability-related supports. It is not given as cash. It is used to pay for supports that are reasonable and necessary, related to the participant’s disability, and linked to their goals.",
+    "keywords": [
+      "ndis funding",
+      "what is ndis funding",
+      "funding",
+      "plan funding",
+      "budget",
+      "reasonable and necessary"
+    ],
+    "intent": "funding_explanation",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "critical",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0011",
+    "category": "Plans & Funding",
+    "subcategory": "Funding Basics",
+    "question": "How does NDIS funding work?",
+    "answer": "NDIS funding is included in a participant’s plan and divided into budgets such as Core, Capital, and Capacity Building. The funding can only be used for approved disability-related supports that meet NDIS rules.",
+    "keywords": [
+      "how ndis funding works",
+      "ndis budget",
+      "core supports",
+      "capital supports",
+      "capacity building",
+      "plan funding"
+    ],
+    "intent": "funding_explanation",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "critical",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0012",
+    "category": "Plans & Funding",
+    "subcategory": "Funding Basics",
+    "question": "Does NDIS give participants cash?",
+    "answer": "No. NDIS funding is not usually given as cash. Funding is allocated in the participant’s plan and is released when approved supports are delivered and claimed, or reimbursed in some self-managed situations.",
+    "keywords": [
+      "ndis cash",
+      "does ndis give money",
+      "lump sum",
+      "funding released",
+      "reimbursement"
+    ],
+    "intent": "funding_explanation",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "critical",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0013",
+    "category": "Plans & Funding",
+    "subcategory": "Funding Basics",
+    "question": "What can NDIS funding be used for?",
+    "answer": "NDIS funding can be used for approved supports that relate to the participant’s disability, help with goals, support independence or participation, provide value for money, and meet reasonable and necessary criteria.",
+    "keywords": [
+      "what can ndis funding be used for",
+      "approved supports",
+      "reasonable and necessary",
+      "disability-related supports"
+    ],
+    "intent": "funding_usage",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "critical",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0014",
+    "category": "NDIS Basics",
+    "subcategory": "Not Covered",
+    "question": "What does the NDIS not do?",
+    "answer": "The NDIS does not replace health, education, housing, or general income support systems. It does not usually pay for everyday living costs such as rent, groceries, medical treatment, school fees, or supports unrelated to disability.",
+    "keywords": [
+      "what ndis does not do",
+      "not covered",
+      "everyday expenses",
+      "health education housing",
+      "rent groceries"
+    ],
+    "intent": "basic_understanding",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "high",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0015",
+    "category": "NDIS Basics",
+    "subcategory": "Access",
+    "question": "How do I start with the NDIS?",
+    "answer": "You start by checking whether you meet the age, residency, and disability or early intervention requirements. If you think you may be eligible, you can submit an access request to the NDIA and provide medical and functional evidence.",
+    "keywords": [
+      "start ndis",
+      "get started with ndis",
+      "apply for ndis",
+      "access request",
+      "eligibility"
+    ],
+    "intent": "process",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "high",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0016",
+    "category": "NDIS Basics",
+    "subcategory": "Access",
+    "question": "Is NDIS the same as Centrelink?",
+    "answer": "No. The NDIS is not the same as Centrelink. The NDIS funds disability-related supports for eligible participants, while Centrelink generally manages income support payments and related benefits.",
+    "keywords": [
+      "ndis centrelink",
+      "is ndis centrelink",
+      "income support",
+      "disability supports"
+    ],
+    "intent": "basic_understanding",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "medium",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0017",
+    "category": "NDIS Basics",
+    "subcategory": "Provider Basics",
+    "question": "Does the NDIS provide services directly?",
+    "answer": "The NDIS usually funds supports through a participant’s plan. Services are delivered by providers, such as support workers, therapy providers, plan managers, support coordinators, or other disability service providers.",
+    "keywords": [
+      "does ndis provide services",
+      "providers",
+      "service delivery",
+      "support workers",
+      "therapy providers"
+    ],
+    "intent": "basic_understanding",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "medium",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0018",
+    "category": "NDIS Basics",
+    "subcategory": "Plain English",
+    "question": "Explain NDIS in simple words",
+    "answer": "The NDIS is a support system for eligible Australians with permanent and significant disability. If approved, a person gets a plan with funding for disability-related supports that help them live more independently and take part in daily life.",
+    "keywords": [
+      "explain ndis simply",
+      "ndis simple explanation",
+      "plain english ndis",
+      "basic ndis"
+    ],
+    "intent": "basic_understanding",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "critical",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0019",
+    "category": "Plans & Funding",
+    "subcategory": "Funding Basics",
+    "question": "What are NDIS support budgets?",
+    "answer": "NDIS support budgets are funding categories inside a participant’s plan. Common budgets include Core supports for everyday needs, Capital supports for higher-cost items, and Capacity Building supports for skills and independence.",
+    "keywords": [
+      "support budgets",
+      "ndis budgets",
+      "core capital capacity building",
+      "funding categories"
+    ],
+    "intent": "funding_explanation",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "high",
+    "safety_note": ""
+  },
+  {
+    "id": "ndis_basic_0020",
+    "category": "NDIS Basics",
+    "subcategory": "Reasonable and Necessary",
+    "question": "What does reasonable and necessary mean in simple words?",
+    "answer": "Reasonable and necessary means a support must be connected to your disability, help with your goals or daily life, be value for money, be effective, and not be something another system should provide.",
+    "keywords": [
+      "reasonable and necessary simple",
+      "reasonable necessary",
+      "funding rules",
+      "approved supports"
+    ],
+    "intent": "rules",
+    "source_document": "NDIS Basics - Added Foundation Layer",
+    "source": "NDIS Basics - Added Foundation Layer",
+    "priority": "critical",
+    "safety_note": ""
+  },
+  {
     "id": "ndis_0001",
     "category": "Eligibility",
     "subcategory": "Age",
@@ -12,7 +368,8 @@
     "intent": "eligibility_check",
     "source_document": "Eligibility checklist.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0002",
@@ -27,7 +384,8 @@
     "intent": "eligibility_check",
     "source_document": "Eligibility checklist.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0003",
@@ -42,7 +400,8 @@
     "intent": "informational",
     "source_document": "Eligibility checklist.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0004",
@@ -57,7 +416,8 @@
     "intent": "process",
     "source_document": "Eligibility checklist.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0005",
@@ -72,7 +432,8 @@
     "intent": "eligibility_check",
     "source_document": "Eligibility checklist.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0006",
@@ -88,7 +449,8 @@
     "intent": "eligibility_check",
     "source_document": "Eligibility checklist.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0007",
@@ -103,7 +465,8 @@
     "intent": "eligibility_check",
     "source_document": "Eligibility checklist.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0008",
@@ -118,7 +481,8 @@
     "intent": "eligibility_check",
     "source_document": "Eligibility checklist.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0009",
@@ -133,7 +497,8 @@
     "intent": "informational",
     "source_document": "Eligibility checklist.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0010",
@@ -148,7 +513,8 @@
     "intent": "process",
     "source_document": "Eligibility checklist.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0011",
@@ -163,7 +529,8 @@
     "intent": "eligibility_check",
     "source_document": "Eligibility checklist.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0012",
@@ -178,7 +545,8 @@
     "intent": "eligibility_check",
     "source_document": "Eligibility checklist.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0013",
@@ -194,7 +562,8 @@
     "intent": "eligibility_check",
     "source_document": "Eligibility checklist.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0014",
@@ -209,7 +578,8 @@
     "intent": "process",
     "source_document": "Eligibility checklist.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0015",
@@ -225,7 +595,8 @@
     "intent": "informational",
     "source_document": "Eligibility checklist.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0016",
@@ -241,7 +612,8 @@
     "intent": "eligibility_check",
     "source_document": "Eligibility checklist.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0017",
@@ -255,7 +627,8 @@
     "intent": "eligibility_check",
     "source_document": "Eligibility checklist.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0018",
@@ -270,7 +643,8 @@
     "intent": "eligibility_check",
     "source_document": "Eligibility checklist.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "Eligibility checklist.docx"
   },
   {
     "id": "ndis_0019",
@@ -285,7 +659,8 @@
     "intent": "process",
     "source_document": "NDIS APPLICATION PROCESS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS APPLICATION PROCESS.docx"
   },
   {
     "id": "ndis_0020",
@@ -300,7 +675,8 @@
     "intent": "process",
     "source_document": "NDIS APPLICATION PROCESS.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS APPLICATION PROCESS.docx"
   },
   {
     "id": "ndis_0021",
@@ -315,7 +691,8 @@
     "intent": "process",
     "source_document": "NDIS APPLICATION PROCESS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS APPLICATION PROCESS.docx"
   },
   {
     "id": "ndis_0022",
@@ -330,7 +707,8 @@
     "intent": "process",
     "source_document": "NDIS APPLICATION PROCESS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS APPLICATION PROCESS.docx"
   },
   {
     "id": "ndis_0023",
@@ -345,7 +723,8 @@
     "intent": "process",
     "source_document": "NDIS APPLICATION PROCESS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS APPLICATION PROCESS.docx"
   },
   {
     "id": "ndis_0024",
@@ -360,7 +739,8 @@
     "intent": "process",
     "source_document": "NDIS APPLICATION PROCESS.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS APPLICATION PROCESS.docx"
   },
   {
     "id": "ndis_0025",
@@ -376,7 +756,8 @@
     "intent": "process",
     "source_document": "NDIS APPLICATION PROCESS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS APPLICATION PROCESS.docx"
   },
   {
     "id": "ndis_0026",
@@ -391,7 +772,8 @@
     "intent": "troubleshooting",
     "source_document": "NDIS APPLICATION PROCESS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS APPLICATION PROCESS.docx"
   },
   {
     "id": "ndis_0027",
@@ -406,7 +788,8 @@
     "intent": "process",
     "source_document": "NDIS APPLICATION PROCESS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS APPLICATION PROCESS.docx"
   },
   {
     "id": "ndis_0028",
@@ -421,7 +804,8 @@
     "intent": "process",
     "source_document": "NDIS APPLICATION PROCESS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS APPLICATION PROCESS.docx"
   },
   {
     "id": "ndis_0029",
@@ -436,7 +820,8 @@
     "intent": "troubleshooting",
     "source_document": "NDIS Support Funding.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0030",
@@ -447,12 +832,17 @@
     "keywords": [
       "core",
       "capital",
-      "capacity building"
+      "capacity building",
+      "ndis funding",
+      "budget categories",
+      "support budgets",
+      "core capital capacity building"
     ],
     "intent": "informational",
     "source_document": "NDIS Support Funding.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0031",
@@ -467,7 +857,8 @@
     "intent": "informational",
     "source_document": "NDIS Support Funding.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0032",
@@ -482,7 +873,8 @@
     "intent": "informational",
     "source_document": "NDIS Support Funding.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0033",
@@ -497,7 +889,8 @@
     "intent": "informational",
     "source_document": "NDIS Support Funding.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0034",
@@ -512,7 +905,8 @@
     "intent": "informational",
     "source_document": "NDIS Support Funding.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0035",
@@ -527,7 +921,8 @@
     "intent": "informational",
     "source_document": "NDIS Support Funding.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0036",
@@ -537,12 +932,16 @@
     "answer": "NDIS typically funds supports that relate to your disability, help with your goals, support social or economic participation, provide value for money, are effective and beneficial, maintain informal supports, and are listed as NDIS supports.",
     "keywords": [
       "reasonable and necessary",
-      "NDIS supports"
+      "NDIS supports",
+      "what is ndis funding",
+      "funding basics",
+      "approved supports"
     ],
     "intent": "eligibility_check",
     "source_document": "NDIS Support Funding.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0037",
@@ -557,7 +956,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS Support Funding.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0038",
@@ -572,7 +972,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS Support Funding.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0039",
@@ -587,7 +988,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS Support Funding.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0040",
@@ -602,7 +1004,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS Support Funding.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0041",
@@ -617,7 +1020,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS Support Funding.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0042",
@@ -628,12 +1032,17 @@
     "keywords": [
       "NDIS plan",
       "goals",
-      "funding"
+      "funding",
+      "what is ndis plan",
+      "plan basics",
+      "support budgets",
+      "funded supports"
     ],
     "intent": "informational",
     "source_document": "NDIS Support Funding.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0043",
@@ -648,7 +1057,8 @@
     "intent": "informational",
     "source_document": "NDIS Support Funding.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0044",
@@ -662,7 +1072,8 @@
     "intent": "informational",
     "source_document": "NDIS Support Funding.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0045",
@@ -676,7 +1087,8 @@
     "intent": "informational",
     "source_document": "NDIS Support Funding.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Support Funding.docx"
   },
   {
     "id": "ndis_0046",
@@ -690,7 +1102,8 @@
     "intent": "informational",
     "source_document": "NDIS PRICING.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PRICING.docx"
   },
   {
     "id": "ndis_0047",
@@ -705,7 +1118,8 @@
     "intent": "rules",
     "source_document": "NDIS PRICING.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PRICING.docx"
   },
   {
     "id": "ndis_0048",
@@ -720,7 +1134,8 @@
     "intent": "safety_escalation",
     "source_document": "NDIS PRICING.docx",
     "priority": "high",
-    "safety_note": "For suspected fraud or serious misuse, direct users to report to NDIA or relevant authorities."
+    "safety_note": "For suspected fraud or serious misuse, direct users to report to NDIA or relevant authorities.",
+    "source": "NDIS PRICING.docx"
   },
   {
     "id": "ndis_0049",
@@ -735,7 +1150,8 @@
     "intent": "informational",
     "source_document": "NDIS PRICING.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PRICING.docx"
   },
   {
     "id": "ndis_0050",
@@ -750,7 +1166,8 @@
     "intent": "troubleshooting",
     "source_document": "NDIS PRICING.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PRICING.docx"
   },
   {
     "id": "ndis_0051",
@@ -765,7 +1182,8 @@
     "intent": "informational",
     "source_document": "NDIS PRICING.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PRICING.docx"
   },
   {
     "id": "ndis_0052",
@@ -780,7 +1198,8 @@
     "intent": "informational",
     "source_document": "NDIS PRICING.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PRICING.docx"
   },
   {
     "id": "ndis_0053",
@@ -795,7 +1214,8 @@
     "intent": "rules",
     "source_document": "NDIS PRICING.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PRICING.docx"
   },
   {
     "id": "ndis_0054",
@@ -810,7 +1230,8 @@
     "intent": "informational",
     "source_document": "NDIS PRICING.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PRICING.docx"
   },
   {
     "id": "ndis_0055",
@@ -825,7 +1246,8 @@
     "intent": "rules",
     "source_document": "NDIS PRICING.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PRICING.docx"
   },
   {
     "id": "ndis_0056",
@@ -840,7 +1262,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0057",
@@ -854,7 +1277,8 @@
     "intent": "informational",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0058",
@@ -868,7 +1292,8 @@
     "intent": "informational",
     "source_document": "NDIS Services.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0059",
@@ -884,7 +1309,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS Services.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0060",
@@ -894,12 +1320,17 @@
     "answer": "NDIS covers reasonable and necessary supports related to your disability that help you pursue goals, build independence, participate in the community, and provide value for money.",
     "keywords": [
       "services",
-      "covers"
+      "covers",
+      "ndis services",
+      "what does ndis cover",
+      "supports covered",
+      "services covered"
     ],
     "intent": "informational",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0061",
@@ -910,12 +1341,16 @@
     "keywords": [
       "not covered",
       "health",
-      "education"
+      "education",
+      "not covered by ndis",
+      "what ndis does not cover",
+      "excluded supports"
     ],
     "intent": "eligibility_check",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0062",
@@ -930,7 +1365,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS Services.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0063",
@@ -945,7 +1381,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0064",
@@ -959,7 +1396,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0065",
@@ -974,7 +1412,8 @@
     "intent": "informational",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0066",
@@ -988,7 +1427,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0067",
@@ -1003,7 +1443,8 @@
     "intent": "informational",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0068",
@@ -1019,7 +1460,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0069",
@@ -1033,7 +1475,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0070",
@@ -1047,7 +1490,8 @@
     "intent": "informational",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0071",
@@ -1062,7 +1506,8 @@
     "intent": "informational",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0072",
@@ -1076,7 +1521,8 @@
     "intent": "informational",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0073",
@@ -1093,7 +1539,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0074",
@@ -1107,7 +1554,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS Services.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS Services.docx"
   },
   {
     "id": "ndis_0075",
@@ -1122,7 +1570,8 @@
     "intent": "rules",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0076",
@@ -1137,7 +1586,8 @@
     "intent": "rules",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0077",
@@ -1151,7 +1601,8 @@
     "intent": "decision_support",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0078",
@@ -1166,7 +1617,8 @@
     "intent": "rules",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0079",
@@ -1180,7 +1632,8 @@
     "intent": "informational",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0080",
@@ -1194,7 +1647,8 @@
     "intent": "rules",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0081",
@@ -1209,7 +1663,8 @@
     "intent": "troubleshooting",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0082",
@@ -1224,7 +1679,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0083",
@@ -1239,7 +1695,8 @@
     "intent": "informational",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0084",
@@ -1254,7 +1711,8 @@
     "intent": "informational",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0085",
@@ -1268,7 +1726,8 @@
     "intent": "process",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0086",
@@ -1283,7 +1742,8 @@
     "intent": "rules",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0087",
@@ -1298,7 +1758,8 @@
     "intent": "process",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0088",
@@ -1312,7 +1773,8 @@
     "intent": "informational",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0089",
@@ -1326,7 +1788,8 @@
     "intent": "informational",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0090",
@@ -1340,7 +1803,8 @@
     "intent": "process",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0091",
@@ -1354,7 +1818,8 @@
     "intent": "informational",
     "source_document": "NDIS PROVIDERS.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PROVIDERS.docx"
   },
   {
     "id": "ndis_0092",
@@ -1368,7 +1833,8 @@
     "intent": "process",
     "source_document": "PLAN MANAGEMENT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "PLAN MANAGEMENT.docx"
   },
   {
     "id": "ndis_0093",
@@ -1382,7 +1848,8 @@
     "intent": "informational",
     "source_document": "PLAN MANAGEMENT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "PLAN MANAGEMENT.docx"
   },
   {
     "id": "ndis_0094",
@@ -1396,7 +1863,8 @@
     "intent": "decision_support",
     "source_document": "PLAN MANAGEMENT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "PLAN MANAGEMENT.docx"
   },
   {
     "id": "ndis_0095",
@@ -1411,7 +1879,8 @@
     "intent": "informational",
     "source_document": "PLAN MANAGEMENT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "PLAN MANAGEMENT.docx"
   },
   {
     "id": "ndis_0096",
@@ -1425,7 +1894,8 @@
     "intent": "rules",
     "source_document": "PLAN MANAGEMENT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "PLAN MANAGEMENT.docx"
   },
   {
     "id": "ndis_0097",
@@ -1439,7 +1909,8 @@
     "intent": "informational",
     "source_document": "PLAN MANAGEMENT.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "PLAN MANAGEMENT.docx"
   },
   {
     "id": "ndis_0098",
@@ -1454,7 +1925,8 @@
     "intent": "informational",
     "source_document": "PLAN MANAGEMENT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "PLAN MANAGEMENT.docx"
   },
   {
     "id": "ndis_0099",
@@ -1468,7 +1940,8 @@
     "intent": "informational",
     "source_document": "PLAN MANAGEMENT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "PLAN MANAGEMENT.docx"
   },
   {
     "id": "ndis_0100",
@@ -1483,7 +1956,8 @@
     "intent": "troubleshooting",
     "source_document": "PLAN MANAGEMENT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "PLAN MANAGEMENT.docx"
   },
   {
     "id": "ndis_0101",
@@ -1497,7 +1971,8 @@
     "intent": "decision_support",
     "source_document": "PLAN MANAGEMENT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "PLAN MANAGEMENT.docx"
   },
   {
     "id": "ndis_0102",
@@ -1512,7 +1987,8 @@
     "intent": "informational",
     "source_document": "PLAN MANAGEMENT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "PLAN MANAGEMENT.docx"
   },
   {
     "id": "ndis_0103",
@@ -1527,7 +2003,8 @@
     "intent": "informational",
     "source_document": "PLAN MANAGEMENT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "PLAN MANAGEMENT.docx"
   },
   {
     "id": "ndis_0104",
@@ -1543,7 +2020,8 @@
     "intent": "rules",
     "source_document": "PLAN MANAGEMENT.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "PLAN MANAGEMENT.docx"
   },
   {
     "id": "ndis_0105",
@@ -1557,7 +2035,8 @@
     "intent": "informational",
     "source_document": "PLAN MANAGEMENT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "PLAN MANAGEMENT.docx"
   },
   {
     "id": "ndis_0106",
@@ -1571,7 +2050,8 @@
     "intent": "informational",
     "source_document": "NDIS PARTICIPANT SUPPORT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PARTICIPANT SUPPORT.docx"
   },
   {
     "id": "ndis_0107",
@@ -1586,7 +2066,8 @@
     "intent": "decision_support",
     "source_document": "NDIS PARTICIPANT SUPPORT.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PARTICIPANT SUPPORT.docx"
   },
   {
     "id": "ndis_0108",
@@ -1601,7 +2082,8 @@
     "intent": "informational",
     "source_document": "NDIS PARTICIPANT SUPPORT.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PARTICIPANT SUPPORT.docx"
   },
   {
     "id": "ndis_0109",
@@ -1616,7 +2098,8 @@
     "intent": "informational",
     "source_document": "NDIS PARTICIPANT SUPPORT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PARTICIPANT SUPPORT.docx"
   },
   {
     "id": "ndis_0110",
@@ -1631,7 +2114,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS PARTICIPANT SUPPORT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PARTICIPANT SUPPORT.docx"
   },
   {
     "id": "ndis_0111",
@@ -1645,7 +2129,8 @@
     "intent": "informational",
     "source_document": "NDIS PARTICIPANT SUPPORT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PARTICIPANT SUPPORT.docx"
   },
   {
     "id": "ndis_0112",
@@ -1659,7 +2144,8 @@
     "intent": "informational",
     "source_document": "NDIS PARTICIPANT SUPPORT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PARTICIPANT SUPPORT.docx"
   },
   {
     "id": "ndis_0113",
@@ -1673,7 +2159,8 @@
     "intent": "troubleshooting",
     "source_document": "NDIS PARTICIPANT SUPPORT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PARTICIPANT SUPPORT.docx"
   },
   {
     "id": "ndis_0114",
@@ -1687,7 +2174,8 @@
     "intent": "informational",
     "source_document": "NDIS PARTICIPANT SUPPORT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PARTICIPANT SUPPORT.docx"
   },
   {
     "id": "ndis_0115",
@@ -1701,7 +2189,8 @@
     "intent": "decision_support",
     "source_document": "NDIS PARTICIPANT SUPPORT.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PARTICIPANT SUPPORT.docx"
   },
   {
     "id": "ndis_0116",
@@ -1716,7 +2205,8 @@
     "intent": "informational",
     "source_document": "NDIS PARTICIPANT SUPPORT.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS PARTICIPANT SUPPORT.docx"
   },
   {
     "id": "ndis_0117",
@@ -1730,7 +2220,8 @@
     "intent": "troubleshooting",
     "source_document": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx"
   },
   {
     "id": "ndis_0118",
@@ -1744,7 +2235,8 @@
     "intent": "informational",
     "source_document": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx"
   },
   {
     "id": "ndis_0119",
@@ -1759,7 +2251,8 @@
     "intent": "process",
     "source_document": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx"
   },
   {
     "id": "ndis_0120",
@@ -1774,7 +2267,8 @@
     "intent": "process",
     "source_document": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx"
   },
   {
     "id": "ndis_0121",
@@ -1788,7 +2282,8 @@
     "intent": "safety_escalation",
     "source_document": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx",
     "priority": "high",
-    "safety_note": "If there is immediate danger, advise calling emergency services."
+    "safety_note": "If there is immediate danger, advise calling emergency services.",
+    "source": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx"
   },
   {
     "id": "ndis_0122",
@@ -1802,7 +2297,8 @@
     "intent": "process",
     "source_document": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx"
   },
   {
     "id": "ndis_0123",
@@ -1816,7 +2312,8 @@
     "intent": "process",
     "source_document": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx"
   },
   {
     "id": "ndis_0124",
@@ -1830,7 +2327,8 @@
     "intent": "process",
     "source_document": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx"
   },
   {
     "id": "ndis_0125",
@@ -1844,7 +2342,8 @@
     "intent": "informational",
     "source_document": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx"
   },
   {
     "id": "ndis_0126",
@@ -1858,7 +2357,8 @@
     "intent": "informational",
     "source_document": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx"
   },
   {
     "id": "ndis_0127",
@@ -1872,7 +2372,8 @@
     "intent": "troubleshooting",
     "source_document": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx"
   },
   {
     "id": "ndis_0128",
@@ -1886,7 +2387,8 @@
     "intent": "process",
     "source_document": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx"
   },
   {
     "id": "ndis_0129",
@@ -1901,7 +2403,8 @@
     "intent": "informational",
     "source_document": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx"
   },
   {
     "id": "ndis_0130",
@@ -1915,7 +2418,8 @@
     "intent": "informational",
     "source_document": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "0f120d6e-0894-43bf-bbcc-f55e715f3139.docx"
   },
   {
     "id": "ndis_0131",
@@ -1929,7 +2433,8 @@
     "intent": "informational",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0132",
@@ -1943,7 +2448,8 @@
     "intent": "rules",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0133",
@@ -1958,7 +2464,8 @@
     "intent": "safety_escalation",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": "Emergency guidance: call 000 if immediate danger."
+    "safety_note": "Emergency guidance: call 000 if immediate danger.",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0134",
@@ -1973,7 +2480,8 @@
     "intent": "safety_escalation",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0135",
@@ -1987,7 +2495,8 @@
     "intent": "troubleshooting",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0136",
@@ -2001,7 +2510,8 @@
     "intent": "informational",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0137",
@@ -2015,7 +2525,8 @@
     "intent": "informational",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0138",
@@ -2030,7 +2541,8 @@
     "intent": "process",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0139",
@@ -2045,7 +2557,8 @@
     "intent": "safety_escalation",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0140",
@@ -2059,7 +2572,8 @@
     "intent": "safety_escalation",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0141",
@@ -2073,7 +2587,8 @@
     "intent": "rules",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0142",
@@ -2087,7 +2602,8 @@
     "intent": "rules",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0143",
@@ -2102,7 +2618,8 @@
     "intent": "informational",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0144",
@@ -2116,7 +2633,8 @@
     "intent": "safety_escalation",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0145",
@@ -2130,7 +2648,8 @@
     "intent": "informational",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0146",
@@ -2145,7 +2664,8 @@
     "intent": "rules",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0147",
@@ -2159,7 +2679,8 @@
     "intent": "safety_escalation",
     "source_document": "NDIS RULES.docx",
     "priority": "high",
-    "safety_note": "Emergency guidance: call 000 if immediate danger."
+    "safety_note": "Emergency guidance: call 000 if immediate danger.",
+    "source": "NDIS RULES.docx"
   },
   {
     "id": "ndis_0148",
@@ -2174,7 +2695,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS REAL USER QUESTIONS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS REAL USER QUESTIONS.docx"
   },
   {
     "id": "ndis_0149",
@@ -2189,7 +2711,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS REAL USER QUESTIONS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS REAL USER QUESTIONS.docx"
   },
   {
     "id": "ndis_0150",
@@ -2203,7 +2726,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS REAL USER QUESTIONS.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS REAL USER QUESTIONS.docx"
   },
   {
     "id": "ndis_0151",
@@ -2218,7 +2742,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS REAL USER QUESTIONS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS REAL USER QUESTIONS.docx"
   },
   {
     "id": "ndis_0152",
@@ -2233,7 +2758,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS REAL USER QUESTIONS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS REAL USER QUESTIONS.docx"
   },
   {
     "id": "ndis_0153",
@@ -2248,7 +2774,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS REAL USER QUESTIONS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS REAL USER QUESTIONS.docx"
   },
   {
     "id": "ndis_0154",
@@ -2262,7 +2789,8 @@
     "intent": "decision_support",
     "source_document": "NDIS REAL USER QUESTIONS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS REAL USER QUESTIONS.docx"
   },
   {
     "id": "ndis_0155",
@@ -2276,7 +2804,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS REAL USER QUESTIONS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS REAL USER QUESTIONS.docx"
   },
   {
     "id": "ndis_0156",
@@ -2290,7 +2819,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS REAL USER QUESTIONS.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS REAL USER QUESTIONS.docx"
   },
   {
     "id": "ndis_0157",
@@ -2305,7 +2835,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS EDGE CASES.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS EDGE CASES.docx"
   },
   {
     "id": "ndis_0158",
@@ -2319,7 +2850,8 @@
     "intent": "process",
     "source_document": "NDIS EDGE CASES.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS EDGE CASES.docx"
   },
   {
     "id": "ndis_0159",
@@ -2333,7 +2865,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS EDGE CASES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS EDGE CASES.docx"
   },
   {
     "id": "ndis_0160",
@@ -2348,7 +2881,8 @@
     "intent": "process",
     "source_document": "NDIS EDGE CASES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS EDGE CASES.docx"
   },
   {
     "id": "ndis_0161",
@@ -2363,7 +2897,8 @@
     "intent": "scenario_handling",
     "source_document": "NDIS EDGE CASES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS EDGE CASES.docx"
   },
   {
     "id": "ndis_0162",
@@ -2378,7 +2913,8 @@
     "intent": "troubleshooting",
     "source_document": "NDIS EDGE CASES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS EDGE CASES.docx"
   },
   {
     "id": "ndis_0163",
@@ -2393,7 +2929,8 @@
     "intent": "eligibility_check",
     "source_document": "NDIS EDGE CASES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS EDGE CASES.docx"
   },
   {
     "id": "ndis_0164",
@@ -2407,7 +2944,8 @@
     "intent": "troubleshooting",
     "source_document": "NDIS EDGE CASES.docx",
     "priority": "medium",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS EDGE CASES.docx"
   },
   {
     "id": "ndis_0165",
@@ -2421,6 +2959,7 @@
     "intent": "eligibility_check",
     "source_document": "NDIS EDGE CASES.docx",
     "priority": "high",
-    "safety_note": ""
+    "safety_note": "",
+    "source": "NDIS EDGE CASES.docx"
   }
 ]

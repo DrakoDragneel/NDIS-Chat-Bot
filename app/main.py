@@ -4,6 +4,7 @@ from pydantic import BaseModel
 
 from app.services.dataset_search import search_dataset
 from app.services.gemini_service import generate_gemini_answer, GeminiError
+from app.services.suggestion_service import get_suggestions, should_show_contact
 
 
 app = FastAPI(
@@ -31,7 +32,9 @@ NDIS_KEYWORDS = [
     "disability",
     "participant",
     "plan",
+    "plans",
     "funding",
+    "budget",
     "support",
     "supports",
     "provider",
@@ -48,8 +51,11 @@ NDIS_KEYWORDS = [
     "ndis commission",
     "quality and safeguards",
     "eligibility",
+    "eligible",
+    "qualify",
     "access request",
     "application",
+    "apply",
     "review",
     "reassessment",
     "therapy",
@@ -71,21 +77,30 @@ NDIS_KEYWORDS = [
     "respite",
     "short term accommodation",
     "sta",
+    "rent",
+    "housing",
+    "groceries",
+    "food",
+    "gym",
+    "travel",
+    "complaint",
+    "unsafe",
+    "support worker",
 ]
 
 
 def is_ndis_related(message: str) -> bool:
     message_lower = message.lower()
-
     return any(keyword in message_lower for keyword in NDIS_KEYWORDS)
 
 
 @app.get("/")
-def home():
+def health_check():
     return {
-        "message": "NDIS Chatbot API is running.",
-        "test_url": "/docs",
-        "chat_endpoint": "/api/chat"
+        "status": "running",
+        "message": "NDIS chatbot FastAPI backend is running.",
+        "docs": "/docs",
+        "chat_endpoint": "/api/chat",
     }
 
 
@@ -104,7 +119,13 @@ def chat(request: ChatRequest):
                 "Please ask about NDIS eligibility, services, funding, providers, plans, "
                 "plan management, reviews, or support."
             ),
-            "sources": []
+            "suggestions": [
+                "What is NDIS?",
+                "How does NDIS funding work?",
+                "What services does NDIS cover?",
+            ],
+            "show_contact": False,
+            "sources": [],
         }
 
     context_items = search_dataset(message, limit=6)
@@ -117,20 +138,23 @@ def chat(request: ChatRequest):
                 "or payment questions, or the NDIS Quality and Safeguards Commission for "
                 "provider safety, complaints, or incident concerns."
             ),
-            "sources": []
+            "suggestions": [
+                "What is NDIS?",
+                "How does NDIS funding work?",
+                "How do I apply for NDIS?",
+            ],
+            "show_contact": True,
+            "sources": [],
         }
 
     try:
         answer = generate_gemini_answer(message, context_items)
     except GeminiError as exc:
-        raise HTTPException(
-            status_code=500,
-            detail=str(exc)
-        ) from exc
+        raise HTTPException(status_code=500, detail=str(exc)) from exc
     except Exception as exc:
         raise HTTPException(
             status_code=500,
-            detail="Something went wrong while generating the response."
+            detail="Something went wrong while generating the response.",
         ) from exc
 
     sources = [
@@ -138,13 +162,18 @@ def chat(request: ChatRequest):
             "category": item.get("category", ""),
             "subcategory": item.get("subcategory", ""),
             "question": item.get("question", ""),
-            "source": item.get("source", ""),
-            "score": item.get("_score", 0)
+            "source": item.get("source") or item.get("source_document", ""),
+            "score": item.get("_score", 0),
         }
         for item in context_items
     ]
 
+    suggestions = get_suggestions(message, context_items)
+    show_contact = should_show_contact(message, answer)
+
     return {
         "answer": answer,
-        "sources": sources
+        "suggestions": suggestions,
+        "show_contact": show_contact,
+        "sources": sources,
     }
