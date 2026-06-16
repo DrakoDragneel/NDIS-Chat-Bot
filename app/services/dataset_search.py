@@ -1,17 +1,8 @@
 import json
-import re
-from typing import Any, Dict, List, Set
+import numpy as np
+from typing import Any, Dict, List
 
 from app.config import DATASET_PATH
-
-
-STOP_WORDS = {
-    "a", "an", "the", "is", "are", "am", "i", "me", "my", "you", "your",
-    "can", "could", "would", "should", "do", "does", "did", "for", "to",
-    "of", "in", "on", "at", "with", "and", "or", "it", "this", "that",
-    "what", "how", "why", "when", "where", "who", "if", "about", "use",
-    "using", "ndis"
-}
 
 
 def _load_dataset() -> List[Dict[str, Any]]:
@@ -24,168 +15,160 @@ def _load_dataset() -> List[Dict[str, Any]]:
     return data
 
 
-DATASET = _load_dataset()
-
-
-def normalize(text: Any) -> str:
-    if text is None:
-        return ""
-
-    text = str(text).lower()
-    text = re.sub(r"[^\w\s]", " ", text)
-    text = re.sub(r"\s+", " ", text).strip()
-
-    return text
-
-
-def tokenize(text: Any) -> List[str]:
-    normalized = normalize(text)
-    words = normalized.split()
-
-    return [
-        word for word in words
-        if word not in STOP_WORDS and len(word) > 2
-    ]
-
-
-def get_keywords(item: Dict[str, Any]) -> List[str]:
+def _build_entry_text(item: Dict[str, Any]) -> str:
+    """
+    Combine the most meaningful fields into a single string for embedding.
+    Keywords and subcategory are included so the model captures topic signals.
+    """
     keywords = item.get("keywords", []) or []
-
-    if isinstance(keywords, str):
-        return [keywords]
-
     if isinstance(keywords, list):
-        return [str(keyword) for keyword in keywords]
+        keywords_str = " ".join(str(k) for k in keywords)
+    else:
+        keywords_str = str(keywords)
 
-    return []
+    parts = [
+        item.get("category", ""),
+        item.get("subcategory", ""),
+        item.get("question", ""),
+        item.get("answer", ""),
+        keywords_str,
+    ]
+    return " ".join(p for p in parts if p).strip()
 
 
-def calculate_score(
-    item: Dict[str, Any],
-    query: str,
-    query_terms: List[str],
-    query_term_set: Set[str],
-) -> int:
-    category = item.get("category", "")
-    subcategory = item.get("subcategory", "")
-    question = item.get("question", "")
-    answer = item.get("answer", "")
-    keywords = get_keywords(item)
+def _cosine_similarity(vec_a: np.ndarray, matrix: np.ndarray) -> np.ndarray:
+    """
+    Compute cosine similarity between a single query vector and every row
+    in a pre-normalised embedding matrix.  Both sides are L2-normalised so
+    the dot product equals cosine similarity directly.
+    """
+    norm_a = np.linalg.norm(vec_a)
+    if norm_a == 0:
+        return np.zeros(matrix.shape[0])
+    vec_a_norm = vec_a / norm_a
 
-    question_norm = normalize(question)
-    answer_norm = normalize(answer)
-    category_norm = normalize(category)
-    subcategory_norm = normalize(subcategory)
-    keyword_norm = normalize(" ".join(keywords))
+    norms = np.linalg.norm(matrix, axis=1, keepdims=True)
+    norms = np.where(norms == 0, 1e-10, norms)
+    matrix_norm = matrix / norms
 
-    combined_norm = normalize(
+    return matrix_norm.dot(vec_a_norm)
+
+
+# ---------------------------------------------------------------------------
+# Module-level initialisation — runs once on startup
+# ---------------------------------------------------------------------------
+
+print("[dataset_search] Loading dataset...")
+DATASET: List[Dict[str, Any]] = _load_dataset()
+print(f"[dataset_search] {len(DATASET)} entries loaded.")
+
+print("[dataset_search] Loading sentence-transformer model...")
+try:
+    from sentence_transformers import SentenceTransformer  # type: ignore
+    _MODEL = SentenceTransformer("all-MiniLM-L6-v2")
+    print("[dataset_search] Model loaded.")
+
+    _ENTRY_TEXTS = [_build_entry_text(item) for item in DATASET]
+
+    print("[dataset_search] Embedding dataset entries...")
+    _EMBEDDINGS: np.ndarray = _MODEL.encode(
+        _ENTRY_TEXTS,
+        convert_to_numpy=True,
+        show_progress_bar=False,
+        batch_size=64,
+    )
+    print(f"[dataset_search] Embeddings ready — shape {_EMBEDDINGS.shape}.")
+    _VECTOR_SEARCH_AVAILABLE = True
+
+except ImportError:
+    print(
+        "[dataset_search] WARNING: sentence-transformers not installed. "
+        "Falling back to keyword search. "
+        "Run: pip install sentence-transformers"
+    )
+    _MODEL = None
+    _EMBEDDINGS = None
+    _VECTOR_SEARCH_AVAILABLE = False
+
+
+# ---------------------------------------------------------------------------
+# Keyword fallback (kept as a safety net)
+# ---------------------------------------------------------------------------
+
+import re
+from typing import Set
+
+_STOP_WORDS: Set[str] = {
+    "a", "an", "the", "is", "are", "am", "i", "me", "my", "you", "your",
+    "can", "could", "would", "should", "do", "does", "did", "for", "to",
+    "of", "in", "on", "at", "with", "and", "or", "it", "this", "that",
+    "what", "how", "why", "when", "where", "who", "if", "about", "use",
+    "using", "ndis",
+}
+
+
+def _normalize(text: Any) -> str:
+    text = str(text or "").lower()
+    text = re.sub(r"[^\w\s]", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _tokenize(text: Any) -> List[str]:
+    return [w for w in _normalize(text).split() if w not in _STOP_WORDS and len(w) > 2]
+
+
+def _keyword_score(item: Dict[str, Any], query_terms: List[str]) -> int:
+    combined = _normalize(
         " ".join([
-            str(category),
-            str(subcategory),
-            str(question),
-            str(answer),
-            " ".join(keywords),
+            item.get("category", ""),
+            item.get("subcategory", ""),
+            item.get("question", ""),
+            item.get("answer", ""),
+            " ".join(item.get("keywords", []) or []),
         ])
     )
+    return sum(12 if t in _normalize(item.get("question", "")) else 2
+               for t in query_terms if t in combined)
 
-    item_terms = set(tokenize(combined_norm))
 
-    score = 0
-
-    # Exact or near-exact question match
-    if query and query == question_norm:
-        score += 100
-
-    if query and query in question_norm:
-        score += 60
-
-    # Important: question match is stronger than answer/body match
-    for term in query_terms:
-        if term in question_norm:
-            score += 12
-
-        if term in keyword_norm:
-            score += 10
-
-        if term in subcategory_norm:
-            score += 8
-
-        if term in category_norm:
-            score += 5
-
-        if term in answer_norm:
-            score += 2
-
-    # Overlap ratio bonus
-    overlap = query_term_set.intersection(item_terms)
-
-    if query_term_set:
-        overlap_ratio = len(overlap) / len(query_term_set)
-        score += int(overlap_ratio * 30)
-
-    # Strong phrase intent matching
-    phrase_boosts = [
-        ("rent", ["rent", "housing", "accommodation", "sda", "sil"]),
-        ("groceries", ["food", "groceries", "meal", "meals"]),
-        ("food", ["food", "groceries", "meal", "meals"]),
-        ("gym", ["gym", "exercise", "therapy"]),
-        ("travel", ["travel", "transport", "holidays", "holiday"]),
-        ("therapy", ["therapy", "ot", "speech", "physio", "physiotherapy"]),
-        ("provider", ["provider", "registered", "unregistered"]),
-        ("plan manager", ["plan manager", "plan management", "invoice", "payment"]),
-        ("support coordinator", ["support coordinator", "support coordination"]),
-        ("review", ["review", "reassessment", "change in circumstances"]),
-        ("complaint", ["complaint", "commission", "unsafe", "provider"]),
-    ]
-
-    for trigger, related_terms in phrase_boosts:
-        if trigger in query:
-            if any(term in combined_norm for term in related_terms):
-                score += 20
-            else:
-                score -= 10
-
-    # Penalize broad "Can I use NDIS for..." matches that only match generic words
-    generic_questions = [
-        "can i use ndis for",
-        "does ndis cover",
-        "can i pay",
-    ]
-
-    if any(generic in query for generic in generic_questions):
-        important_query_terms = query_term_set.difference({
-            "cover", "pay", "fund", "funding"
-        })
-
-        if important_query_terms:
-            important_overlap = important_query_terms.intersection(item_terms)
-
-            if not important_overlap:
-                score -= 30
-
-    return score
-
+# ---------------------------------------------------------------------------
+# Public API
+# ---------------------------------------------------------------------------
 
 def search_dataset(user_question: str, limit: int = 6) -> List[Dict[str, Any]]:
-    query = normalize(user_question)
-    query_terms = tokenize(query)
-    query_term_set = set(query_terms)
+    """
+    Return the *limit* most relevant dataset entries for *user_question*.
 
-    scored_items = []
-
-    for item in DATASET:
-        score = calculate_score(
-            item=item,
-            query=query,
-            query_terms=query_terms,
-            query_term_set=query_term_set,
+    Uses semantic (vector) search when sentence-transformers is available,
+    otherwise falls back to keyword matching.
+    """
+    if _VECTOR_SEARCH_AVAILABLE and _MODEL is not None and _EMBEDDINGS is not None:
+        query_vec: np.ndarray = _MODEL.encode(
+            user_question,
+            convert_to_numpy=True,
+            show_progress_bar=False,
         )
+        scores = _cosine_similarity(query_vec, _EMBEDDINGS)
 
-        if score > 0:
+        # Attach scores and filter out very weak matches (similarity < 0.25)
+        results = []
+        for idx, score in enumerate(scores):
+            if score >= 0.25:
+                item_copy = dict(DATASET[idx])
+                item_copy["_score"] = round(float(score), 4)
+                results.append(item_copy)
+
+        results.sort(key=lambda x: x["_score"], reverse=True)
+        return results[:limit]
+
+    # --- keyword fallback ---
+    query_terms = _tokenize(user_question)
+    results = []
+    for item in DATASET:
+        s = _keyword_score(item, query_terms)
+        if s > 0:
             item_copy = dict(item)
-            item_copy["_score"] = score
-            scored_items.append(item_copy)
-
-    scored_items.sort(key=lambda x: x["_score"], reverse=True)
-
-    return scored_items[:limit]
+            item_copy["_score"] = s
+            results.append(item_copy)
+    results.sort(key=lambda x: x["_score"], reverse=True)
+    return results[:limit]
