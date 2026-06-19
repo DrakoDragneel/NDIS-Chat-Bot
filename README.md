@@ -1,142 +1,78 @@
-# NDIS Chatbot Backend — Python FastAPI + Gemini + Semantic Search
+# NDIS Assistant - React Frontend
 
-## What changed in v2.0
+A chat interface for the NDIS chatbot backend (Python FastAPI or Node).
+Built with React + Vite. Connects to the backend's `/api/chat` endpoint.
 
-- **Vector / semantic search** replaces the old keyword scorer.
-  The bot now understands meaning, so "Do I qualify?" and "Am I eligible?"
-  both find the right entries even if the wording differs from the dataset.
-- **Conversation history** — the `/api/chat` endpoint now accepts an optional
-  `history` array so follow-up questions ("what about for transport?") work
-  correctly.
-- **Bug fix** — context blocks sent to Gemini were joined with a literal
-  `\n` string instead of a real newline. Fixed in `gemini_service.py`.
-- **Smarter suggestions** — follow-up suggestions are now drawn from the
-  same category as the search result instead of being fully hardcoded.
+## Features
 
----
+- Multi-turn chat: sends conversation history so follow-up questions work
+- Clickable suggested questions (from the backend)
+- Expandable "where this came from" sources under each answer
+- Contact banner appears when the bot recommends reaching a human
+- Accessible: large readable type, high contrast, keyboard focus styles,
+  screen-reader live region, and respects reduced-motion
 
 ## Requirements
 
-1. Python 3.10 or newer
-2. A Gemini API key from [Google AI Studio](https://aistudio.google.com/)
-
----
+- Node.js 18 or newer
+- The NDIS backend running and reachable
 
 ## Setup
 
 ```bash
-cd NDIS-Chat-Bot
-python -m venv .venv
+npm install
+cp .env.example .env     # set VITE_API_URL to your backend URL
+npm run dev
 ```
 
-Activate on Windows PowerShell:
+Open the URL Vite prints (default http://localhost:5173).
 
-```powershell
-.\.venv\Scripts\Activate.ps1
-```
+## Connecting to the backend
 
-If PowerShell blocks activation:
-
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\.venv\Scripts\Activate.ps1
-```
-
-Install packages:
-
-```bash
-pip install -r requirements.txt
-```
-
-> **Note:** `sentence-transformers` will download the `all-MiniLM-L6-v2`
-> model (~80 MB) on first startup. This happens once and is cached locally.
-
-Create `.env` file:
+The frontend reads the backend URL from `VITE_API_URL` in `.env`:
 
 ```env
-GEMINI_API_KEY=your_gemini_api_key_here
-GEMINI_MODEL=gemini-2.5-flash
-PORT=5000
+VITE_API_URL=http://localhost:5000
 ```
 
----
+If the backend runs elsewhere (a server, Render, etc.), set that URL instead.
+Make sure the backend's CORS settings allow this frontend's domain.
 
-## Run
+## Build for production
 
 ```bash
-uvicorn app.main:app --reload --host 0.0.0.0 --port 5000
+npm run build
 ```
 
-Open:
+The static site is written to `dist/`. Host it anywhere static files are
+served (Netlify, Vercel, a CDN, or alongside your backend). To preview the
+production build locally:
 
-```
-http://localhost:5000
-```
-
-API docs / testing page:
-
-```
-http://localhost:5000/docs
+```bash
+npm run preview
 ```
 
----
+## Project structure
 
-## API
-
-### `POST /api/chat`
-
-**Request body:**
-
-```json
-{
-  "message": "How do I apply for NDIS?",
-  "history": [
-    { "role": "user", "content": "What is NDIS?" },
-    { "role": "assistant", "content": "The NDIS is ..." }
-  ]
-}
+```
+ndis-chatbot-react/
+  index.html
+  vite.config.js
+  .env.example
+  src/
+    main.jsx
+    App.jsx                  # main chat logic + state
+    api.js                   # fetch wrapper for /api/chat
+    styles.css               # design system
+    components/
+      Message.jsx            # chat bubble + sources
+      SuggestionChips.jsx    # clickable follow-ups
+      ContactBanner.jsx      # "speak with someone" banner
 ```
 
-`history` is optional. Pass the last few turns so the bot handles
-follow-up questions correctly.
+## Notes
 
-**Response:**
-
-```json
-{
-  "answer": "...",
-  "suggestions": ["...", "...", "..."],
-  "show_contact": false,
-  "sources": [
-    {
-      "category": "Application Process",
-      "subcategory": "How to Apply",
-      "question": "How do I apply for NDIS?",
-      "source": "...",
-      "score": 0.87
-    }
-  ]
-}
-```
-
----
-
-## Test with PowerShell
-
-```powershell
-Invoke-RestMethod `
-  -Uri "http://localhost:5000/api/chat" `
-  -Method POST `
-  -ContentType "application/json" `
-  -Body '{"message":"Can I use NDIS for rent?"}'
-```
-
----
-
-## Production checklist
-
-- Change `allow_origins=["*"]` in `main.py` to your WordPress domain.
-- Keep `.env` private and never commit it.
-- Add rate limiting before public launch.
-- The semantic model runs in-process — for high traffic consider moving
-  embeddings to a dedicated vector store (ChromaDB, Qdrant, Pinecone).
+- Fonts (Bricolage Grotesque, Hanken Grotesk) load from Google Fonts. If you
+  need fully offline/self-hosted fonts, download them and update `index.html`.
+- The phone numbers in the contact banner are the standard NDIA and NDIS
+  Commission lines. Confirm them with your client before launch.
